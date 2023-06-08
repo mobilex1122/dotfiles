@@ -3,3 +3,4 @@ github-cli
 micro
 kitty
 xclip
+zsh
