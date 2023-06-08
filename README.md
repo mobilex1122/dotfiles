@@ -12,6 +12,6 @@ sudo pacman -S - < ~/.dotfiles/software/pacman-packages.txt
 
 ## Create symlinks (will be automated)
 ```
-ln -s ~/.dotfiles/kitty/ ~/.conf/
-ln -s ~/.dotfiles/.gitconf ~/.gitconf
+ln -s ~/.dotfiles/kitty/ ~/.config/
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
