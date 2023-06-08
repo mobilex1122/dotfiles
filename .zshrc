@@ -22,3 +22,6 @@ prompt mytheme
 
 
 source ~/.zsh-plugins/autocomplate/zsh-autocomplete.plugin.zsh
+
+echo ""
+neofetch
