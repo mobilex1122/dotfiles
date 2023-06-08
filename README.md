@@ -7,7 +7,7 @@ git clone https://github.com/mobilex1122/dotfiles.git
 
 ## Install pacman packages
 ```
-sudo pacman -S - < ./software/pacman-packages.txt
+sudo pacman -S - < ~/.dotfiles/software/pacman-packages.txt
 ```
 
 ## Create symlinks (will be automated)
