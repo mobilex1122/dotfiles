@@ -45,6 +45,10 @@ else
     echo -e "\n${RED}WARN: This is not Arch based distro! Skiping package instalation (refer to software/*-packages.txt)"
 fi
 
+echo -e "\n${BLUE}INFO: Installing and seting up shell${NOCOLOR}"
+
+./setup-shell.sh
+
 
 echo -e "\n${BLUE}INFO: Removing execute permision from setup scripts.${NOCOLOR}"
 find setup-*.sh
