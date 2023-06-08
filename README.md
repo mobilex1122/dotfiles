@@ -2,7 +2,7 @@
 
 ## Clone Repo to ~/.dotfiles
 ```
-git clone https://github.com/mobilex1122/dotfiles.git
+git clone https://github.com/mobilex1122/dotfiles.git ~/.dotfiles
 ```
 
 ## Install pacman packages
