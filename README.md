@@ -3,6 +3,7 @@
 ## Clone Repo to ~/.dotfiles
 ```
 git clone https://github.com/mobilex1122/dotfiles.git ~/.dotfiles
+git submodule update --init --recursive
 ```
 
 ## Automatic installation
