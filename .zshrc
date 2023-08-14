@@ -21,13 +21,13 @@ prompt_themes+=( mytheme )
 prompt mytheme
 
 
-source ~/.zsh-plugins/autocomplate/zsh-autocomplete.plugin.zsh
+##source ~/.zsh-plugins/autocomplate/zsh-autocomplete.plugin.zsh
 
 ## Accepts command without closing autocomplate
-bindkey -M menuselect '\r' .accept-line
+#bindkey -M menuselect '\r' .accept-line
 
-bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
-bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+#bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+#bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
 export LD_LIBRARY_PATH=/usr/lib/qt/plugins:/usr/lib
 

@@ -4,7 +4,7 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	name = mobilex1122
+	name = Jan Palma
 	email = 60009551+mobilex1122@users.noreply.github.com
 [credential "https://github.com"]
 	helper = 
