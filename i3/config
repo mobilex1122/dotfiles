@@ -5,10 +5,18 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# Screenshot Tool (Scrot) (By: Patrik Robin Sloup)
+bindsym --release $mod+x exec "scrot -z -e 'mv $f ~/Screenshots/'"
+bindsym --release $mod+Shift+x exec "scrot -z -s -e 'mv $f ~/Screenshots/'"
+bindsym --release $mod+Mod1+x exec "scrot /tmp/screenshot-$(date +%F_%T).png -z -e 'xclip -selection c -t image/png < $f'"
+bindsym --release $mod+Mod1+Shift+x exec "scrot /tmp/screenshot-$(date +%F_%T).png -z -s -e 'xclip -selection c -t image/png < $f'"
+
+
+
 
 default_border pixel 1
 default_floating_border pixel 1
-gaps inner 5
+gaps inner 10
 
 
 ## Color Theme
@@ -20,7 +28,7 @@ client.unfocused        #030712 #030712 #888888 #030712   #030712
 client.urgent           #dc2626 #030712 #ffffff #dc2626   #dc2626
 client.placeholder      #000000 #030712 #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+client.background       #00000000
 
 
 
@@ -42,13 +50,18 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+
+exec --no-startup-id nitrogen --restore
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+exec --no-startup-id xautolock -time 15 -locker '/usr/bin/i3lock-fancy -f "FiraCode-Nerd-Font-Bold" --nofork -- maim' -detectsleep
+exec_always --no-startup-id ~/.dotfiles/scripts/lock.sh
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -173,7 +186,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -200,7 +213,19 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+mode "quit (y/n)" {
+        bindsym y exec i3-msg exit
+
+        # back to normal: Enter or Escape or $mod+r
+		bindsym n mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
 bindsym $mod+r mode "resize"
+
+bindsym $mod+Shift+e mode "quit (y/n)"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -209,4 +234,5 @@ bar {
  
 #status_command i3status
 }
+
 

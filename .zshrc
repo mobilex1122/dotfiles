@@ -29,8 +29,20 @@ prompt mytheme
 #bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
 #bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 
-export LD_LIBRARY_PATH=/usr/lib/qt/plugins:/usr/lib
+# export LD_LIBRARY_PATH=/usr/lib/qt/plugins:/usr/lib
 
 
 echo ""
-neofetch
+fastfetch
+
+alias debian-start='docker start 14ef01884ea2'
+alias debian-attach='docker attach 14ef01884ea2'
+alias debian-stop='docker stop 14ef01884ea2'
+
+# pnpm
+export PNPM_HOME="/home/mobilex/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

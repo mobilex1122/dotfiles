@@ -1,0 +1,19 @@
+configuration {
+    modes: "window,drun,run,ssh,filebrowser";
+/*	font: "mono 12";*/
+/*	location: 0;*/
+/*	yoffset: 0;*/
+/*	xoffset: 0;*/
+/*	fixed-num-lines: true;*/
+
+
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+@theme "/home/mobilex/.config/rofi/amber-dark"
