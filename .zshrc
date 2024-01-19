@@ -39,6 +39,9 @@ alias debian-start='docker start 14ef01884ea2'
 alias debian-attach='docker attach 14ef01884ea2'
 alias debian-stop='docker stop 14ef01884ea2'
 
+export PATH="$PATH:/home/mobilex/apps/flutter/bin:/home/linuxbrew/.linuxbrew/bin/"
+export ANDROID_HOME=~/Android/Sdk
+
 # pnpm
 export PNPM_HOME="/home/mobilex/.local/share/pnpm"
 case ":$PATH:" in
