@@ -40,6 +40,8 @@ alias debian-attach='docker attach 14ef01884ea2'
 alias debian-stop='docker stop 14ef01884ea2'
 
 export PATH="$PATH:/home/mobilex/apps/flutter/bin:/home/linuxbrew/.linuxbrew/bin/"
+export PATH="$PATH:$HOME/.config/itch/apps/butler"
+export PATH="$PATH:$HOME/.local/share/nvim/mason/bin/"
 export ANDROID_HOME=~/Android/Sdk
 
 # pnpm
@@ -49,3 +51,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

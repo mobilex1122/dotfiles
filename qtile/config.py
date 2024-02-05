@@ -97,7 +97,7 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%"), desc="Brightness up"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-"), desc="Brightness down"),
     Key([], "Print", lazy.spawn("flameshot gui"), desc="Screen Shot"),
-    Key([mod, "shift"], "l", lazy.spawn("loginctl lock-session"), desc="Screen Lock"),
+    Key([mod, "mod1"], "l", lazy.spawn("loginctl lock-session"), desc="Screen Lock"),
 ]
 
 groups = [Group(i) for i in "123456789"]

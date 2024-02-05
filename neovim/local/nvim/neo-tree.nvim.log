@@ -1,0 +1,9 @@
+[ERROR Po 5. února 2024, 10:56:22] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: Keyboard interrupt
+[ERROR Po 5. února 2024, 10:56:25] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: nvim_exec2(): Vim(buffer):E325: ATTENTION
+[ERROR Po 5. února 2024, 10:59:09] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: nvim_exec2(): Vim(edit):E325: ATTENTION
+[ERROR Po 5. února 2024, 11:01:17] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: nvim_exec2(): Vim(edit):E325: ATTENTION
+[ERROR Po 5. února 2024, 11:01:20] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: nvim_exec2(): Vim(buffer):E325: ATTENTION
+[ERROR Po 5. února 2024, 11:02:12] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: nvim_exec2(): Vim(edit):E325: ATTENTION
+[ERROR Po 5. února 2024, 11:04:43] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: nvim_exec2(): Vim(edit):E325: ATTENTION
+[ERROR Po 5. února 2024, 11:07:50] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: nvim_exec2(): Vim(edit):E325: ATTENTION
+[ERROR Po 5. února 2024, 11:19:11] ...hare/nvim/lazy/neo-tree.nvim/lua/neo-tree/utils/init.lua:722: Error opening file: vim/_editor.lua:0: Keyboard interrupt

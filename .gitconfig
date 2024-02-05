@@ -5,7 +5,8 @@
 	required = true
 [user]
 	name = Jan Palma
-	email = 60009551+mobilex1122@users.noreply.github.com
+	email = mobilex1122.en@gmail.com
+	singingkey = BF72D1D9DB3EF03A6069EC6877F7EFF2ED32A956!
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
@@ -14,3 +15,5 @@
 	helper = !/usr/bin/gh auth git-credential
 [core]
 	editor = micro
+[commit]
+	gpgsign = true
