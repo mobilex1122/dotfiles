@@ -1,3 +1,3 @@
 return {
-  colorscheme = "rose-pine",
+  colorscheme = "monokai-pro",
 }

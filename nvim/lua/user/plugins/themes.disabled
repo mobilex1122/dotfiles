@@ -1,0 +1,4 @@
+return {
+  { "rose-pine/neovim", name = "rose-pine", opts = {} },
+  { "AlexvZyl/nordic.nvim", name = "rose-pine", opts = {} }
+}
