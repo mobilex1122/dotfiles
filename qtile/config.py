@@ -188,7 +188,7 @@ screens = [
             border_width=5,  # Draw top and bottom borders
              border_color="#0f172a"  # Borders are magenta
         ),
-        wallpaper="/home/mobilex/Pictures/wallpapers/null-boxes.png"
+        wallpaper="/home/mobilex/Pictures/wallpapers/bg-pc-box-noise.png"
     ),
      Screen(
         wallpaper="/home/mobilex/Pictures/wallpapers/cool.png"
