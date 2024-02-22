@@ -42,6 +42,7 @@ alias debian-stop='docker stop 14ef01884ea2'
 export PATH="$PATH:/home/mobilex/apps/flutter/bin:/home/linuxbrew/.linuxbrew/bin/"
 export PATH="$PATH:$HOME/.config/itch/apps/butler"
 export PATH="$PATH:$HOME/.local/share/nvim/mason/bin/"
+export PATH="$PATH:/home/mobilex/.local/share/gem/ruby/3.0.0/bin"
 export ANDROID_HOME=~/Android/Sdk
 
 # pnpm
@@ -55,3 +56,4 @@ esac
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+export GEM_HOME="$HOME/gems"
