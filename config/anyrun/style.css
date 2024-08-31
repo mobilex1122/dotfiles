@@ -1,0 +1,35 @@
+window {
+	background-color: transparent;
+	border-radius: 20px;
+}
+
+#main {
+	background: transparent;
+}
+#main entry {
+	padding: 10px;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	border-width: 2px;
+}
+#main list > #plugin {
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	background-color: #2A2E32;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+#main list > #plugin:hover {
+	background-color: #2A2E32;
+}
+
+#main list > #plugin list {
+        padding: 10px;
+}
+list > #match {
+	margin: 4px 0px;
+	padding: 4px;
+	border-radius: 5px;
+}
+list > #match:active {
+        background-color: #ffffff;
+}
