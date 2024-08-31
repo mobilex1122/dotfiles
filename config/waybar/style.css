@@ -54,7 +54,9 @@ window#waybar.hidden {
 
 #clock,
 #pulseaudio,
-#custom-logo,
+#custom-mpd-play,
+#custom-mpd-next,
+#custom-mpd-prev,
 #custom-power,
 #custom-spotify,
 #cpu,
@@ -143,4 +145,19 @@ window#waybar.empty #window {
 
 tooltip {
   border-radius: 8px;
+}
+
+
+#custom-mpd-play {
+  border-radius: 2px;
+  margin-left: -0px;
+  margin-right: -0px;
+}
+#custom-mpd-next {
+  border-radius: 2px 5px 5px 2px;
+  margin-left: -0px;
+}
+#custom-mpd-prev {
+  border-radius: 5px 2px 2px 5px;
+  margin-right: -0px;
 }
