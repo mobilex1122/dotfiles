@@ -11,11 +11,15 @@ window {
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 	border-width: 2px;
 }
+#main list {
+	background: transparent;
+}
 #main list > #plugin {
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-	background-color: #2A2E32;
+	background-color: #1B1E20;
 	border-radius: 5px;
 	margin-top: 5px;
+	border: 1px solid #2A2E32;
 }
 
 #main list > #plugin:hover {
@@ -29,7 +33,10 @@ list > #match {
 	margin: 4px 0px;
 	padding: 4px;
 	border-radius: 5px;
+	background-color: transparent;
+	border: 1px solid transparent;
 }
-list > #match:active {
-        background-color: #ffffff;
+list > #match:selected {
+        background-color: #2D546B;
+	border: 1px solid #3DAEE9;
 }
