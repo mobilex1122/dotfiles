@@ -9,21 +9,17 @@ window {
 #main entry {
 	padding: 10px;
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-	border-width: 2px;
 }
 #main list {
 	background: transparent;
 }
-#main list > #plugin {
+#main list > #plugin,
+#main list > #plugin:hover {
 	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 	background-color: #1B1E20;
 	border-radius: 5px;
 	margin-top: 5px;
 	border: 1px solid #2A2E32;
-}
-
-#main list > #plugin:hover {
-	background-color: #2A2E32;
 }
 
 #main list > #plugin list {
