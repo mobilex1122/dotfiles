@@ -1,0 +1,2 @@
+dunst &
+systemctl --user start plasma-polhit-agent &
