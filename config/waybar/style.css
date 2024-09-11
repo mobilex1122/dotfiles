@@ -61,6 +61,7 @@ window#waybar.hidden {
 #custom-spotify,
 #cpu,
 #tray,
+#battery,
 #memory,
 #window {
   min-height: 0;

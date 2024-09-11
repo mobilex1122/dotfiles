@@ -16,6 +16,7 @@
     "pulseaudio",
     "clock",
     "clock#simpleclock",
+    "battery",
     "tray",
     "custom/power",
   ],
@@ -59,6 +60,9 @@
     "tooltip": false,
     "format": "  {:%H:%M}",
   },
+  "battery": {
+    "format": "  {capacity}%"
+  },
   "clock": {
     "format": "  {:L%a %d %b}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -73,7 +77,7 @@
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "  muted",
+    "format-muted": "  --",
     "format-icons": {
       "headphone": " ",
       "hands-free": "󰂑",
