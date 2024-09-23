@@ -61,7 +61,8 @@
     "format": "  {:%H:%M}",
   },
   "battery": {
-    "format": "  {capacity}%"
+    "format": "  {capacity}%",
+    "format-charging": "  {capacity}%"
   },
   "clock": {
     "format": "  {:L%a %d %b}",
