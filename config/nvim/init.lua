@@ -4,15 +4,14 @@ require("config.lazy")
 vim.cmd('colorscheme flexoki-dark')
 vim.opt.termguicolors = true
 vim.notify = require("notify")
-
 vim.opt.fillchars = { eob = " " }
+vim.opt.list = true
+vim.opt.relativenumber = true
 
-local wk = require("which-key") 
+local wk = require("which-key")
 
-wk.add({
-	{ "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Tree View", mode = 'n' }, -- File explorer
-	{ "<leader>l", group = "Lazy Plugin Manager"},
-	{ "<leader>li", "<cmd>Lazy install<cr>", desc = "Install"}
-})
+wk.add(require("config.keybinds"))
 
-
+vim.opt.expandtab = false
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
