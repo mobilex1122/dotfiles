@@ -1,3 +1,3 @@
 return {
-	{ 'nvim-java/nvim-java', name = 'Java'}
+	{ 'nvim-java/nvim-java'}
 }

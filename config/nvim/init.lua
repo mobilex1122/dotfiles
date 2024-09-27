@@ -1,5 +1,8 @@
 require("config.lazy")
 
+
+require('java').setup()
+require('lspconfig').jdtls.setup({})
 -- Set colorscheme after options
 vim.cmd('colorscheme flexoki-dark')
 vim.opt.termguicolors = true

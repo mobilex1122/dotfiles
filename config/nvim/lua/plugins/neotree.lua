@@ -9,5 +9,6 @@ return {
     },
 	config = function()
 		require("neo-tree").setup(require("config/neotree"))
+		vim.g.neo_tree_change_root = 'v:cwd'
 	end
 } 
