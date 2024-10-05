@@ -24,6 +24,8 @@ PS1=' %(#.%F{160}.%F{117})  %F{111}%n%F{255}@%F{111}%m %F{100}%~ %F{247} %
 export SUDO_PROMPT=" 󰢏  Password for %u: "
 #RPS1='%(?.%F{040} .%F{160} )%F '
 
+
+alias simplefetch="fastfetch --config ~/.config/fastfetch/simple.jsonc"
 alias rsh='source ~/.zshrc'
 alias dotfilesgit='lazygit -p ~/.dotfiles'
 alias fyou='echo "Fuck you too!!" && sleep 1 && exit'
@@ -40,6 +42,8 @@ compinit
 if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
   echo "Shell is running in SSH mode"
   clear
+  echo ""
+  simplefetch
   echo -e "\n == SSH Mode enabled ==\n"
   PS1="[SSH] %n@%m %c > "
   export SUDO_PROMPT = "[SUDO SSH] Password for %u: "
@@ -47,6 +51,8 @@ fi
 
 if [[ $TTY == /dev/tty[0-9] ]]; then
   clear
+  echo ""
+  simplefetch
   echo -e "\n == VC Mode enabled ==\n"
   PS1="[VC] %n@%m %c > "
   export SUDO_PROMPT="[SUDO VC] Password for %u: "
