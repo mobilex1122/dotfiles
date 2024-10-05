@@ -42,7 +42,7 @@ compinit
 if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
   echo "Shell is running in SSH mode"
   clear
-  if [ $(tput cols) -gt 60 ]; then
+  if [ $(tput cols) -gt 70 ]; then
     simplefetch
   fi
   echo -e "\n == SSH Mode enabled ==\n"
