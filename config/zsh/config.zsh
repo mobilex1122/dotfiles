@@ -19,6 +19,9 @@ echo ""
 #PS1='  %F{117}  %F{111}%n%F{255}@%F{111}%m %F{100}%~ %F{247} %F{255}'
 
 PS1=' %(#.%F{160}.%F{117})  %F{111}%n%F{255}@%F{111}%m %F{100}%~ %F{247} %F{255}'
+
+## Sets SUDO Prompt to nicer one
+export SUDO_PROMPT=" 󰢏  Password for %u: "
 #RPS1='%(?.%F{040} .%F{160} )%F '
 
 alias rsh='source ~/.zshrc'
@@ -37,8 +40,15 @@ compinit
 if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
   echo "Shell is running in SSH mode"
   clear
-  echo "SSH Mode enabled"
-  PS1=" %c > "
-else
-  echo "Shell is not running in SSH mode"
+  echo -e "\n == SSH Mode enabled ==\n"
+  PS1="[SSH] %n@%m %c > "
+  export SUDO_PROMPT = "[SUDO SSH] Password for %u: "
 fi
+
+if [[ $TTY == /dev/tty[0-9] ]]; then
+  clear
+  echo -e "\n == VC Mode enabled ==\n"
+  PS1="[VC] %n@%m %c > "
+  export SUDO_PROMPT="[SUDO VC] Password for %u: "
+fi
+
