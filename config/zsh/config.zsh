@@ -48,7 +48,7 @@ if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
     simplefetch
     PS1="[SSH] %n@%m %c > "
   fi
-  echo -e "\n == SSH Mode enabled ==\n"
+  echo ""
   export SUDO_PROMPT="[SUDO SSH] Password for %u: "
 fi
 
@@ -56,7 +56,7 @@ if [[ $TTY == /dev/tty[0-9] ]]; then
   clear
   echo ""
   simplefetch
-  echo -e "\n == VC Mode enabled ==\n"
+  echo ""
   PS1="[VC] %n@%m %c > "
   export SUDO_PROMPT="[SUDO VC] Password for %u: "
 fi
