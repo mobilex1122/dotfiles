@@ -42,8 +42,9 @@ compinit
 if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
   echo "Shell is running in SSH mode"
   clear
-  echo ""
-  simplefetch
+  if [ $(tput cols) -gt 60 ]; then
+    simplefetch
+  fi
   echo -e "\n == SSH Mode enabled ==\n"
   PS1="[SSH] %n@%m %c > "
   export SUDO_PROMPT = "[SUDO SSH] Password for %u: "
