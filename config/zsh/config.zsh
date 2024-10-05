@@ -45,10 +45,11 @@ if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
   PS1="[SSH] %c > "
   
   if [ $(tput cols) -gt 70 ]; then
+    echo ""
     simplefetch
+    echo ""
     PS1="[SSH] %n@%m %c > "
   fi
-  echo ""
   export SUDO_PROMPT="[SUDO SSH] Password for %u: "
 fi
 
