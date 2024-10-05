@@ -6,7 +6,7 @@
   },
   {
     "label": "Logout",
-    "exec": "hyrpctl dispatch exit",
+    "exec": "hyprctl dispatch exit",
     "icon": "system-log-out-symbolic"
   },
   {
