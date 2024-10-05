@@ -1,23 +1,12 @@
 # Jan Palma - Dotfiles
 
+My own system config with hyprland.
+
+This config is not really made to be easy to install if you want to install you are mostly on your own. (But if you need help you are free to ask me how i did it on discord `mobilex1122`)
 
 ## Dependencies
 
-### Required
-`hyprland`
-`hyprpaper`
-`hypridle`
-`hyprlock`
-`waybar`
-`dunst`
-`wufi`
-`ttf-firacode-nerd`
-`ttf-nerd-symbols`
-
-### Optional (but recommended)
-`webcord`
-
-
+Figure it out on your own. :)
 
 ## Setup
 
