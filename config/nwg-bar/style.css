@@ -11,9 +11,10 @@ window {
 #inner-box {
   background-color: #1B1E20;
   border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   border: #282B2F solid 1px;
   padding: 5px;
-  margin: 5px
+  margin: 30px;
 }
 
 button,
