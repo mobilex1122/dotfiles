@@ -100,7 +100,7 @@
   },
   "custom/power": {
     "tooltip": false,
-    "on-click": "hyprctl dispatch exit &",
+    "on-click": "nwg-bar",
     "format": "⏻ ",
   },
 }

@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Lock",
+    "exec": "loginctl lock-session",
+    "icon": "system-lock-screen-symbolic"
+  },
+  {
+    "label": "Logout",
+    "exec": "hyrpctl dispatch exit",
+    "icon": "system-log-out-symbolic"
+  },
+  {
+    "label": "Suspend",
+    "exec": "systemctl reboot",
+    "icon": "system-suspend-symbolic"
+  },
+  {
+    "label": "Reboot",
+    "exec": "systemctl reboot",
+    "icon": "system-reboot-symbolic"
+  },
+  {
+    "label": "Shutdown",
+    "exec": "systemctl -i poweroff",
+    "icon": "system-shutdown-symbolic"
+  }
+]

@@ -1,4 +1,5 @@
 # Lines configured by zsh-newuser-install
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -33,3 +34,11 @@ compinit
 # End of lines added by compinstall
 
 
+if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
+  echo "Shell is running in SSH mode"
+  clear
+  echo "SSH Mode enabled"
+  PS1=" %c > "
+else
+  echo "Shell is not running in SSH mode"
+fi
