@@ -11,6 +11,7 @@
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": [],
   "modules-right": [
+    "keyboard-state",
     "cpu",
     "memory",
     "pulseaudio",
@@ -67,6 +68,18 @@
   "clock": {
     "format": "  {:L%a %d %b}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": {
+        "numlock": "󰎤",
+        "capslock": "󰬈"
+    },
+    "format-icons": {
+        "locked": " ",
+        "unlocked": " "
+    }
   },
   "cpu": {
     "format": "  {usage}%",
