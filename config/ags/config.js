@@ -1,5 +1,8 @@
 const hyprland = await Service.import('hyprland')
+const monitors = hyprland.bind("monitors");
 
+
+import { TopBar } from "./topBar/main.js"
 import { Audio } from "./sideWidgets/audio.js"
 import { Media } from "./sideWidgets/musicPlayer.js"
 import Workspaces from "./Workspaces.js"
@@ -51,6 +54,7 @@ let sidebar = Widget.Window({
       hscroll: "never",
       vscroll: "automatic",
       child: Widget.Box({
+        css: "min-width:400px",
         vertical: true,
         children: sidebarChildren
       })

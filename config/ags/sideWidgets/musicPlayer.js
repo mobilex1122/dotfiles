@@ -147,10 +147,10 @@ function Player(player) {
 
 export function Media() {
   return Widget.Box({
-    class_name: "widget",
+    class_name: players.as(p => p.length > 0 ? "widget" : ""),
     vertical: true,
     vexpand: false,
-    css: "min-height: 2px; min-width: 2px;", // small hack to make it visible
+    //css: "min-height: 2px; min-width: 2px;", // small hack to make it visible
     visible: players.as(p => p.length > 0),
     children: players.as(p => p.map(Player)),
   })
