@@ -6,6 +6,7 @@ import { TopBar } from "./topBar/main.js"
 import { Audio } from "./sideWidgets/audio.js"
 import { Media } from "./sideWidgets/musicPlayer.js"
 import Workspaces from "./Workspaces.js"
+import { Notify } from "./notifi/main.js";
 
 function Bar(monitor = 0) {
   const myLabel = Widget.Label({
@@ -66,6 +67,8 @@ let sidebar = Widget.Window({
   margins: [0, 0, 0, 0]
 })
 
+
+globalThis.sidebaOpen = Variable(false);
 globalThis.sidebar = () => {
   const monitor = hyprland.active.monitor.id ?? 0
   if (sidebar.monitor == monitor) {
@@ -74,6 +77,7 @@ globalThis.sidebar = () => {
     sidebar.monitor = monitor
     sidebar.visible = true
   }
+  globalThis.sidebaOpen.setValue(sidebar.visible);
 }
 
 
@@ -81,6 +85,24 @@ globalThis.sidebar = () => {
 App.config({
   windows: [
     sidebar, // can be instantiated for each monitor
+    TopBar(0),
+    TopBar(1),
+    Notify(0)
   ],
   style: './style.css',
 })
+
+
+
+Utils.monitorFile(
+  // directory that contains the scss files
+  `${App.configDir}/style.css`,
+
+  // reload function
+  function() {
+    // main scss file
+    const css = `${App.configDir}/style.css`
+    App.resetCss()
+    App.applyCss(css)
+  },
+)
