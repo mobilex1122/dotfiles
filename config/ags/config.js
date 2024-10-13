@@ -1,12 +1,15 @@
 const hyprland = await Service.import('hyprland')
 const monitors = hyprland.bind("monitors");
 
-
 import { TopBar } from "./topBar/main.js"
 import { Audio } from "./sideWidgets/audio.js"
 import { Media } from "./sideWidgets/musicPlayer.js"
 import Workspaces from "./Workspaces.js"
 import { Notify } from "./notifi/main.js";
+
+
+globalThis.batMinLimit = 20;
+
 
 function Bar(monitor = 0) {
   const myLabel = Widget.Label({
@@ -82,16 +85,33 @@ globalThis.sidebar = () => {
 
 
 
+const battery = await Service.import('battery')
+const BatBorder = (monitor = 0) => Widget.Window({
+  keymode: "none",
+  layer: "overlay",
+  css: "background: rgba(0,0,0,0)",
+  monitor: monitor,
+  sensitive: false,
+  visible: battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15)),
+  anchor: ["bottom"],
+  child: Widget.Box({
+    class_name: "batLowBanner",
+    child: Widget.Label({ sensitive: false, css: "padding:2px; color: white", label: "Low Battery!" })
+  })
+})
+
 App.config({
   windows: [
     sidebar, // can be instantiated for each monitor
-    TopBar(0),
-    TopBar(1),
     Notify(0)
   ],
   style: './style.css',
 })
 
+hyprland.monitors.forEach(monitor => {
+  App.add_window(TopBar(monitor.id))
+  App.add_window(BatBorder(monitor.id))
+})
 
 
 Utils.monitorFile(

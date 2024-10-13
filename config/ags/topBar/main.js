@@ -74,14 +74,18 @@ const button = () => Widget.Button({
 
 const battery = await Service.import('battery')
 
-const BatteryTray = () => Widget.CircularProgress({
-  child: Widget.Icon({
-    icon: battery.bind('icon_name')
+const BatteryTray = () => Widget.Icon({
+  class_name: "batteryIcon",
+  icon: battery.bind('icon_name'),
+  tooltipText: Utils.merge([
+    battery.bind('charging').as(ch => ch ? 'Charging' : 'Discharging'),
+    battery.bind("percent").as(p => (p + "%"))
+  ], (chrg, percent) => {
+    return `${chrg}: ${percent}`
   }),
   visible: battery.bind('available'),
-  value: battery.bind('percent').as(p => p > 0 ? p / 100 : 0),
-  class_name: battery.bind('charging').as(ch => ch ? 'charging' : ''),
 })
+
 
 const leftBar = (monitor) => [
   button(),
@@ -105,7 +109,9 @@ export function TopBar(monitor = 0) {
     name: "topbar-" + monitor,
     monitor: monitor,
     layer: "bottom",
-    className: "topBarMain",
+    className: Utils.merge([
+      battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15) ? "batLow" : "")
+    ], (bat) => `topBarMain ${bat}`),
     exclusivity: "exclusive",
     child: Widget.CenterBox({
       class_name: "topBar",
