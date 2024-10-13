@@ -92,7 +92,10 @@ const BatBorder = (monitor = 0) => Widget.Window({
   css: "background: rgba(0,0,0,0)",
   monitor: monitor,
   sensitive: false,
-  visible: battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15)),
+  visible: Utils.merge([
+    battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15)),
+    battery.bind('available')
+  ], (bat, bata) => bat && bata),
   anchor: ["bottom"],
   child: Widget.Box({
     class_name: "batLowBanner",
@@ -113,7 +116,7 @@ hyprland.monitors.forEach(monitor => {
   App.add_window(BatBorder(monitor.id))
 })
 
-
+/*
 Utils.monitorFile(
   // directory that contains the scss files
   `${App.configDir}/style.css`,
@@ -126,3 +129,4 @@ Utils.monitorFile(
     App.applyCss(css)
   },
 )
+*/

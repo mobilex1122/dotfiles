@@ -110,8 +110,9 @@ export function TopBar(monitor = 0) {
     monitor: monitor,
     layer: "bottom",
     className: Utils.merge([
-      battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15) ? "batLow" : "")
-    ], (bat) => `topBarMain ${bat}`),
+      battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15) ? "batLow" : ""),
+      battery.bind('available')
+    ], (bat, bata) => `topBarMain ${bat && bata}`),
     exclusivity: "exclusive",
     child: Widget.CenterBox({
       class_name: "topBar",
