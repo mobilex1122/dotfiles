@@ -4,8 +4,17 @@ const audio = await Service.import('audio')
 const VolumeSlider = (type = 'speaker') => Widget.Slider({
   hexpand: true,
   drawValue: false,
-  onChange: ({ value }) => audio[type].volume = value,
-  value: audio[type].bind('volume'),
+  sensitive: true,
+  onChange: ({ value }) => {
+    if (audio[type].is_muted) {
+      audio[type].is_muted = false
+    }
+    audio[type].volume = value
+  },
+  value: Utils.merge([
+    audio[type].bind('volume'),
+    audio[type].bind('is_muted')
+  ], (volume, muted) => muted ? 0 : volume)
 })
 const AppVolumeSlider = (app) => Widget.Slider({
   hexpand: true,
@@ -23,7 +32,7 @@ function audioSource(stream, name) {
           Widget.Icon({ icon: stream == "microphone" ? "microphone-symbolic" : "speaker" }),
           Widget.Label({
             class_name: "audio_source_name",
-            label: name,
+            label: audio[stream].bind("is_muted").as(m => m ? name + " (Muted)" : name),
             xalign: 0,
             justification: "left"
           })

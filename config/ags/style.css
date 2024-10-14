@@ -171,7 +171,7 @@ window.notification-popups box.notifications {
 }
 
 .notification {
-  min-width: 250px;
+  min-width: 350px;
   border-radius: 5px;
   padding: 5px;
   margin: 8px;

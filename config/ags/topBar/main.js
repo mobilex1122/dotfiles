@@ -74,18 +74,42 @@ const button = () => Widget.Button({
 
 const battery = await Service.import('battery')
 
-const BatteryTray = () => Widget.Icon({
-  class_name: "batteryIcon",
-  icon: battery.bind('icon_name'),
-  tooltipText: Utils.merge([
-    battery.bind('charging').as(ch => ch ? 'Charging' : 'Discharging'),
-    battery.bind("percent").as(p => (p + "%"))
-  ], (chrg, percent) => {
-    return `${chrg}: ${percent}`
+const BatteryTray = () => Widget.Box({
+  children: [Widget.Icon({
+    class_name: "batteryIcon",
+    icon: battery.bind('icon_name'),
+    tooltipText: Utils.merge([
+      battery.bind('charging').as(ch => ch ? 'Charging' : 'Discharging'),
+      battery.bind("percent").as(p => (p + "%"))
+    ], (chrg, percent) => {
+      return `${chrg}: ${percent}`
+    })
   }),
+  Widget.Label({ label: battery.bind("percent").as(p => p + "%") })
+  ],
   visible: battery.bind('available'),
 })
 
+const audio = await Service.import('audio')
+const VolumeIndicator = () => Widget.Button({
+  class_name: "trayIcon",
+  on_secondary_click: () => globalThis.sidebar(),
+  on_clicked: () => audio.speaker.is_muted = !audio.speaker.is_muted,
+  child: Widget.Icon().hook(audio.speaker, self => {
+    const vol = audio.speaker.volume * 100;
+    let icon = [
+      [101, 'overamplified'],
+      [67, 'high'],
+      [34, 'medium'],
+      [0, 'low'],
+    ].find(([threshold]) => threshold <= vol)?.[1];
+    if (audio.speaker.is_muted) {
+      icon = "muted"
+    }
+    self.icon = `audio-volume-${icon}-symbolic`;
+    self.tooltip_text = `Volume ${Math.floor(vol)}%`;
+  }),
+})
 
 const leftBar = (monitor) => [
   button(),
@@ -97,6 +121,7 @@ const centerBar = () => [
 ]
 
 const rightBar = () => [
+  VolumeIndicator(),
   SysTray(),
   BatteryTray(),
   DateTray()
@@ -110,9 +135,10 @@ export function TopBar(monitor = 0) {
     monitor: monitor,
     layer: "bottom",
     className: Utils.merge([
-      battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15) ? "batLow" : ""),
-      battery.bind('available')
-    ], (bat, bata) => `topBarMain ${bat && bata}`),
+      battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15)),
+      battery.bind('available'),
+      battery.bind("charging")
+    ], (bat, bata, batc) => `topBarMain ` + (bat && bata && !batc ? "batLow" : "")),
     exclusivity: "exclusive",
     child: Widget.CenterBox({
       class_name: "topBar",

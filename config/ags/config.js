@@ -94,14 +94,18 @@ const BatBorder = (monitor = 0) => Widget.Window({
   sensitive: false,
   visible: Utils.merge([
     battery.bind("percent").as(p => p <= (globalThis.batMinLimit ?? 15)),
-    battery.bind('available')
-  ], (bat, bata) => bat && bata),
+    battery.bind('available'),
+    battery.bind("charging")
+
+  ], (bat, bata, batc) => bat && bata && !batc),
   anchor: ["bottom"],
   child: Widget.Box({
     class_name: "batLowBanner",
-    child: Widget.Label({ sensitive: false, css: "padding:2px; color: white", label: "Low Battery!" })
+    child: Widget.Label({ sensitive: false, css: "padding:2px; color: white", label: battery.bind("percent").as(p => `Low Battery! (${p}%)`) })
   })
 })
+
+
 
 App.config({
   windows: [
