@@ -20,7 +20,7 @@
 }
 
 .batLowBanner {
-  background: rgba(255,0,0,1);
+  background: rgba(255, 0, 0, 1);
   padding: 4px;
   border-radius: 5px;
   margin: 10px;
@@ -118,7 +118,7 @@ button.trayIcon {
   padding: 2px 5px 2px 6px;
   background: rgba(0, 0, 0, 0);
   border: 0px solid rgba(0, 0, 0, 0);
-  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 button.active,
@@ -152,21 +152,21 @@ window.notification-popups box.notifications {
 }
 
 .icon {
-  min-width: 32px;
-  min-height: 32px;
+  min-width: 50px;
+  min-height: 50px;
   margin-right: 1em;
 }
 
 .icon image {
-  font-size: 32px;
+  font-size: 40px;
   /* to center the icon */
   margin: 5px;
   color: @theme_fg_color;
 }
 
 .icon box {
-  min-width: 64px;
-  min-height: 64px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 7px;
 }
 
@@ -185,10 +185,11 @@ window.notification-popups box.notifications {
 
 .title {
   color: @theme_fg_color;
-  font-size: 1.4em;
+  font-size: 14px;
 }
 
 .body {
+  font-size: 12px;
   color: @theme_unfocused_fg_color;
 }
 
