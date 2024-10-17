@@ -30,6 +30,8 @@ alias rsh='source ~/.zshrc'
 alias dotfilesgit='lazygit -p ~/.dotfiles'
 alias fyou='echo "Fuck you too!!" && sleep 1 && exit'
 alias cls='clear'
+alias ani-cat="ANI_CLI_PLAYER=catt ani-cli"
+
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mobilex/.zshrc'
