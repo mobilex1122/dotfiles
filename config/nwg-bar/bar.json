@@ -11,7 +11,7 @@
   },
   {
     "label": "Suspend",
-    "exec": "systemctl reboot",
+    "exec": "systemctl suspend",
     "icon": "system-suspend-symbolic"
   },
   {
