@@ -1,15 +1,15 @@
 {
-  "menuTheme": "rainbow-labels",
+  "menuTheme": "default",
   "darkMenuTheme": "default",
   "menuThemeColors": {
     "rainbow-labels": {
       "icon-color": "rgba(51, 51, 51, 1)"
     },
     "default": {
-      "text-color": "rgba(60, 60, 60, 1)",
-      "border-color": "rgba(109, 109, 109, 1)",
-      "hover-color": "rgba(255, 200, 200, 1)",
-      "background-color": "rgba(255, 255, 255, 1)"
+      "text-color": "rgba(255, 255, 255, 1)",
+      "border-color": "rgba(8, 20, 31, 1)",
+      "hover-color": "rgba(89, 70, 70, 1)",
+      "background-color": "rgba(41, 41, 41, 1)"
     },
     "neon-lights": {
       "glow-color": "rgba(255, 140, 210, 1)"

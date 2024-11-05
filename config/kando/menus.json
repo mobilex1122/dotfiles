@@ -10,45 +10,6 @@
           {
             "type": "submenu",
             "data": {},
-            "name": "Submenu",
-            "icon": "music_note",
-            "iconTheme": "material-symbols-rounded",
-            "children": [
-              {
-                "type": "command",
-                "data": {
-                  "command": "playerctl next",
-                  "delayed": false
-                },
-                "name": "Next",
-                "icon": "skip_next",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "playerctl previous",
-                  "delayed": false
-                },
-                "name": "Previous",
-                "icon": "skip_previous",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "playerctl play-pause",
-                  "delayed": false
-                },
-                "name": "Play-pause",
-                "icon": "play_arrow",
-                "iconTheme": "material-symbols-rounded"
-              }
-            ]
-          },
-          {
-            "type": "submenu",
-            "data": {},
             "name": "Apps",
             "icon": "background_dot_small",
             "iconTheme": "material-symbols-rounded",
@@ -62,6 +23,16 @@
                 "name": "Neovide",
                 "icon": "neovim",
                 "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "kitty",
+                  "delayed": false
+                },
+                "name": "Kitty",
+                "icon": "terminal",
+                "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "command",
@@ -83,8 +54,7 @@
                 "icon": "folder_copy",
                 "iconTheme": "material-symbols-rounded"
               }
-            ],
-            "angle": 0
+            ]
           },
           {
             "type": "submenu",
@@ -242,8 +212,82 @@
                 ],
                 "angle": 180
               }
-            ],
-            "angle": 180
+            ]
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Websites",
+            "icon": "public",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://reddit.com"
+                },
+                "name": "Reddit",
+                "icon": "reddit",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://github.com"
+                },
+                "name": "Github",
+                "icon": "github",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://alternativeto.net"
+                },
+                "name": "Alternative to",
+                "icon": "alternativeto",
+                "iconTheme": "simple-icons"
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Submenu",
+            "icon": "music_note",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "playerctl next",
+                  "delayed": false
+                },
+                "name": "Next",
+                "icon": "skip_next",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "playerctl previous",
+                  "delayed": false
+                },
+                "name": "Previous",
+                "icon": "skip_previous",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "playerctl play-pause",
+                  "delayed": false
+                },
+                "name": "Play-pause",
+                "icon": "play_arrow",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
           }
         ]
       },
