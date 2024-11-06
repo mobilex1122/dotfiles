@@ -78,145 +78,6 @@
           {
             "type": "submenu",
             "data": {},
-            "name": "Hyprland",
-            "icon": "hyprland",
-            "iconTheme": "simple-icons",
-            "children": [
-              {
-                "type": "submenu",
-                "data": {},
-                "name": "Workspaces",
-                "icon": "work",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                  {
-                    "type": "submenu",
-                    "data": {},
-                    "name": "Move to",
-                    "icon": "move_group",
-                    "iconTheme": "material-symbols-rounded",
-                    "children": [
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit1",
-                          "delayed": true
-                        },
-                        "name": "Workspace 1",
-                        "icon": "filter_1",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit2",
-                          "delayed": true
-                        },
-                        "name": "Workspace 2",
-                        "icon": "filter_2",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit3",
-                          "delayed": true
-                        },
-                        "name": "Workspace 3",
-                        "icon": "filter_3",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit4",
-                          "delayed": true
-                        },
-                        "name": "Workspace 4",
-                        "icon": "filter_4",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit5",
-                          "delayed": true
-                        },
-                        "name": "Workspace 5",
-                        "icon": "filter_5",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit6",
-                          "delayed": true
-                        },
-                        "name": "Workspace 6",
-                        "icon": "filter_6",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit7",
-                          "delayed": true
-                        },
-                        "name": "Workspace 7",
-                        "icon": "filter_7",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit8",
-                          "delayed": true
-                        },
-                        "name": "Workspace 8",
-                        "icon": "filter_8",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+Digit9",
-                          "delayed": true
-                        },
-                        "name": "Workspace 9",
-                        "icon": "filter_9",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+KeyS",
-                          "delayed": true
-                        },
-                        "name": "Workspace S",
-                        "icon": "stars",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "hotkey",
-                        "data": {
-                          "hotkey": "MetaLeft+ShiftLeft+KeyD",
-                          "delayed": true
-                        },
-                        "name": "Workspace D",
-                        "icon": "settings_ethernet",
-                        "iconTheme": "material-symbols-rounded"
-                      }
-                    ],
-                    "angle": 180
-                  }
-                ],
-                "angle": 180
-              }
-            ]
-          },
-          {
-            "type": "submenu",
-            "data": {},
             "name": "Websites",
             "icon": "public",
             "iconTheme": "material-symbols-rounded",
@@ -237,6 +98,15 @@
                 },
                 "name": "Github",
                 "icon": "github",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "http://localhost:8384/"
+                },
+                "name": "Syncthing",
+                "icon": "syncthing",
                 "iconTheme": "simple-icons"
               },
               {
@@ -378,5 +248,145 @@
       }
     }
   ],
-  "templates": []
+  "templates": [
+    {
+      "type": "submenu",
+      "data": {},
+      "name": "Hyprland",
+      "icon": "hyprland",
+      "iconTheme": "simple-icons",
+      "children": [
+        {
+          "type": "submenu",
+          "data": {},
+          "name": "Workspaces",
+          "icon": "work",
+          "iconTheme": "material-symbols-rounded",
+          "children": [
+            {
+              "type": "submenu",
+              "data": {},
+              "name": "Move to",
+              "icon": "move_group",
+              "iconTheme": "material-symbols-rounded",
+              "children": [
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit1",
+                    "delayed": true
+                  },
+                  "name": "Workspace 1",
+                  "icon": "filter_1",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit2",
+                    "delayed": true
+                  },
+                  "name": "Workspace 2",
+                  "icon": "filter_2",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit3",
+                    "delayed": true
+                  },
+                  "name": "Workspace 3",
+                  "icon": "filter_3",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit4",
+                    "delayed": true
+                  },
+                  "name": "Workspace 4",
+                  "icon": "filter_4",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit5",
+                    "delayed": true
+                  },
+                  "name": "Workspace 5",
+                  "icon": "filter_5",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit6",
+                    "delayed": true
+                  },
+                  "name": "Workspace 6",
+                  "icon": "filter_6",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit7",
+                    "delayed": true
+                  },
+                  "name": "Workspace 7",
+                  "icon": "filter_7",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit8",
+                    "delayed": true
+                  },
+                  "name": "Workspace 8",
+                  "icon": "filter_8",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+Digit9",
+                    "delayed": true
+                  },
+                  "name": "Workspace 9",
+                  "icon": "filter_9",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+KeyS",
+                    "delayed": true
+                  },
+                  "name": "Workspace S",
+                  "icon": "stars",
+                  "iconTheme": "material-symbols-rounded"
+                },
+                {
+                  "type": "hotkey",
+                  "data": {
+                    "hotkey": "MetaLeft+ShiftLeft+KeyD",
+                    "delayed": true
+                  },
+                  "name": "Workspace D",
+                  "icon": "settings_ethernet",
+                  "iconTheme": "material-symbols-rounded"
+                }
+              ],
+              "angle": 180
+            }
+          ],
+          "angle": 180
+        }
+      ]
+    }
+  ]
 }

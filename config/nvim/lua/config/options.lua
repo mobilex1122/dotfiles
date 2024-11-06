@@ -3,7 +3,7 @@
 if vim.g.neovide then
   vim.o.guifont = "FiraCode Nerd Font Mono:h10"
 
-  vim.g.neovide_transparency = 0.8
+  vim.g.neovide_transparency = 1
 
   vim.g.neovide_floating_corner_radius = 1
   vim.g.neovide_floating_blur_amount_x = 2.0
