@@ -1,0 +1,5 @@
+## Linux Specific
+
+[terminal]
+
+shell = { program = "/bin/pwsh", args = ['-nologo'] }
