@@ -9,4 +9,5 @@ if ($IsIDE -eq $True) {
 oh-my-posh init pwsh --config $OMPConfig | Invoke-Expression
 
 ## Personal Preference
+
 Set-Alias -Name code -Value codium
