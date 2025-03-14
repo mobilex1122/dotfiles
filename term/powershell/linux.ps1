@@ -1,1 +1,3 @@
-fastfetch
+if ($IsIDE -ne $True) {
+    fastfetch
+}
