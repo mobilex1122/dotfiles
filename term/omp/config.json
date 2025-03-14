@@ -3,30 +3,31 @@
   "palette": {
         "os": "#ffffff",
         "bg-path": "#ababff",
-        "bg-head": "#57e6ff",
+        "bg-git": "#57e6ff",
         "bg-host":  "#7676ff",
         "wight": "#FFFFFF",
-        "text": "#000000"
+        "text": "#000000",
+        "bg-root": "#cd5e42"
   },
   "blocks": [
     {
       "alignment": "left",
+      "newline": true,
       "segments": [
         {
           "background": "p:bg-host",
           "foreground": "p:wight",
-          "powerline_symbol": "\ue0b4",
-          "leading_diamond": "\ue0b6",
+          "powerline_symbol": "\ue0bc",
           "style": "diamond",
-          "template": "{{.Icon}} ",
+          "template": " {{.Icon}} ",
           "type": "os"
         },
         {
           "background": "p:bg-host",
           "foreground": "p:text",
-          "powerline_symbol": "\ue0b4",
+          "powerline_symbol": "\ue0bc",
           "style": "diamond",
-          "template": "{{ .UserName }}@{{ .HostName }}",
+          "template": "{{ .UserName }} ",
           "type": "session"
         },
         {
@@ -37,13 +38,13 @@
             "home_icon": "~",
             "style": "agnoster_short"
           },
-          "powerline_symbol": "\ue0b4",
+          "powerline_symbol": "\ue0bc",
           "style": "powerline",
-          "template": " {{ .Path }}",
+          "template": " {{ .Path }} ",
           "type": "path"
         },
         {
-          "background": "p:bg-head",
+          "background": "p:bg-git",
           "foreground": "p:text",
           "style": "powerline",
           "properties": {
@@ -58,14 +59,44 @@
             "revert_icon": "\uf0e2 ",
             "tag_icon": "\uf412 "
           },
-          "powerline_symbol": "\ue0b4",
+          "powerline_symbol": "\ue0bc",
           "template": " {{ .HEAD }}",
           "type": "git"
         }
       ],
       "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#a1a1a1",
+          "style": "plain",
+          "template": "\ue0bc ",
+          "type": "text"
+        },
+        {
+          "foreground": "#cd5e42",
+          "style": "plain",
+          "template": "\udb84\udd3b ",
+          "type": "root"
+        },
+        {
+          "foreground": "#a1a1a1",
+          "style": "plain",
+          "template": "$",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
     }
   ],
+  "console_title_template": "{{if .Root}} ROOT: {{end}}{{.Folder}}",
+  "transient_prompt": {
+    "foreground": "#a1a1a1",
+    "template": " {{ .PWD }} \ue0b1 "
+  },
   "final_space": true,
   "version": 3
 }
