@@ -2,6 +2,12 @@
 
 # NOTE: This is global for linux and windows dont't use paths!!
 
+[general]
+
+import = [
+    "theme.toml"
+]
+
 [window]
 
 startup_mode = "Maximized"
