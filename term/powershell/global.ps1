@@ -16,3 +16,9 @@ function StartEditor() {
     Start-Process kate $args
 }
 Set-Alias -Name edit -Value StartEditor
+
+function GitClone() {
+    git clone $args
+}
+
+Set-Alias -Name yoink -Value GitClone
