@@ -18,7 +18,12 @@ function StartEditor() {
 Set-Alias -Name edit -Value StartEditor
 
 function GitClone() {
+    
     git clone $args
+    if($?) {
+        Write-Output ""
+        Write-Output "Hipiti hopiti this code is now my property"
+    }
 }
 
 Set-Alias -Name yoink -Value GitClone
