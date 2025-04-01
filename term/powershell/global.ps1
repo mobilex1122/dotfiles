@@ -11,6 +11,7 @@ oh-my-posh init pwsh --config $OMPConfig | Invoke-Expression
 ## Personal Preference
 
 Set-Alias -Name code -Value codium
+Set-Alias -Name lg -Value lazygit
 
 function StartEditor() {
     Start-Process kate $args
