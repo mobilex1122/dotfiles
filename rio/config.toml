@@ -1,0 +1,11 @@
+theme = "catppuccin-mocha"
+
+[window]
+decorations = "Transparent"
+
+[fonts]
+family = "MesloLGM Nerd Font"
+
+[shell]
+program = "pwsh"
+args = []
