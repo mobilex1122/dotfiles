@@ -1,7 +1,11 @@
 theme = "catppuccin-mocha"
 
 [window]
-decorations = "Transparent"
+mode = "Maximized"
+decorations = "enabled"
+
+[navigation]
+mode = "Bookmark"
 
 [fonts]
 family = "MesloLGM Nerd Font"
