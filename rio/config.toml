@@ -2,7 +2,10 @@ theme = "catppuccin-mocha"
 
 [window]
 mode = "Maximized"
-decorations = "enabled"
+decorations = "Transparent"
+
+[renderer]
+strategy = "Game"
 
 [navigation]
 mode = "Bookmark"
