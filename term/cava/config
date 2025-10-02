@@ -1,0 +1,2 @@
+method = pipewire
+source = alsa:acp:PCH:5:playback

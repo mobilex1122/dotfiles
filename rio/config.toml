@@ -6,6 +6,7 @@ decorations = "Transparent"
 
 [renderer]
 strategy = "Game"
+disable-unfocused-render = false
 
 [navigation]
 mode = "Bookmark"

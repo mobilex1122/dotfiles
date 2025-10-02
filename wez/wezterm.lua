@@ -53,7 +53,7 @@ end
 
 
 --- Default config settings
-
+config.exit_behavior = 'Hold'
 config.launch_menu = launch_menu
 config.default_cursor_style = 'BlinkingBar'
 config.mouse_bindings = mouse_bindings

@@ -1,42 +1,23 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "dock": "right",
-    "version": "2"
+  "icon_theme": "Warm Charmed Icons",
+  "theme": "One Dark Pro",
+  "disable_ai": true,
+  "base_keymap": "VSCode",
+  "ui_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "title_bar": {
+    "show_user_picture": false,
+    "show_sign_in": false
   },
-  "notification_panel": {
-    "dock": "right"
-  },
-  "git_panel": {
+
+  "collaboration_panel": {
     "dock": "left"
   },
-  "features": {
-    "edit_prediction_provider": "none"
-  },
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false
-  },
-  "vim_mode": true,
-  "collaboration_panel": {
-    "button": false
-  },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Catppuccin Mocha"
+  "project_panel": {
+    "indent_guides": {
+      "show": "always"
+    },
+    "default_width": 320,
+    "indent_size": 15
   }
 }

@@ -1,9 +1,6 @@
 ## Includes all configs that are needed.
 
 
-## Allows showing simple version of the shell if used in terminal.
-Clear-Host
-
 $Global:IsIDE = $env:IsIDE -eq "1"
 
 $Global:StartLog = @()
