@@ -1,7 +1,7 @@
 ## Includes all configs that are needed.
 
 
-$Global:IsIDE = $env:IsIDE -eq "1"
+$Global:IsIDE = $env:ISIDE -eq "1"
 
 $Global:StartLog = @()
 function Start-Log-Log() {
@@ -27,12 +27,15 @@ Set-Alias -Name slog -Value Start-Log-Log
 Set-Alias -Name start-log -Value Start-Log-Print
 
 if ($IsIDE) {
-    . "$PSScriptRoot/ide-mode.ps1"    
+    . "$PSScriptRoot/ide-mode.ps1"
 }
 
 if ($IsLinux) {
     . "$PSScriptRoot/global.ps1"
     . "$PSScriptRoot/linux.ps1"
+    if (!$IsIDE) {
+        clear
+    }
 } elseif ($IsWindows) {
     . "$PSScriptRoot\global.ps1"
     . "$PSScriptRoot\windows.ps1"

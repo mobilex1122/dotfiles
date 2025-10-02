@@ -2,13 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "async": true,
   "palette": {
-        "os": "#ffffff",
-        "bg-path": "#ababff",
-        "bg-git": "#57e6ff",
-        "bg-host":  "#7676ff",
-        "wight": "#FFFFFF",
-        "text": "#000000",
-        "bg-root": "#cd5e42"
+    "os": "#ffffff",
+    "bg-path": "#ababff",
+    "bg-git": "#57e6ff",
+    "bg-host": "#7676ff",
+    "wight": "#FFFFFF",
+    "text": "#000000",
+    "bg-root": "#cd5e42"
   },
   "blocks": [
     {

@@ -1,3 +1,0 @@
-## Windows Specific
-[terminal]
-shell = { program = "pwsh", args = ["-nologo"] }

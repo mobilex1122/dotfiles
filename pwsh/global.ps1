@@ -2,7 +2,7 @@
 
 $OMPConfig = "$PSScriptRoot/../omp/config.json"
 
-if ($IsIDE -eq $True) {
+if ($Global:IsIDE -eq $True) {
     $OMPConfig = "$PSScriptRoot/../omp/config-ide.json"
 }
 
@@ -19,7 +19,7 @@ function StartEditor() {
 Set-Alias -Name edit -Value StartEditor
 
 function GitClone() {
-    
+
     git clone $args
     if($?) {
         Write-Output ""

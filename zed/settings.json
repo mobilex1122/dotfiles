@@ -19,5 +19,18 @@
     },
     "default_width": 320,
     "indent_size": 15
+  },
+  "terminal": {
+    "font_family": "FiraCode Nerd Font Mono",
+    "line_height": "standard",
+    "env": {
+      "ISIDE": "1"
+    },
+    "shell": {
+      "with_arguments": {
+        "program": "pwsh",
+        "args": ["-nologo"]
+      }
+    }
   }
 }

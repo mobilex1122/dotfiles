@@ -1,19 +1,13 @@
-theme = "catppuccin-mocha"
-
-[window]
-mode = "Maximized"
-decorations = "Transparent"
-
-[renderer]
-strategy = "Game"
-disable-unfocused-render = false
-
-[navigation]
-mode = "Bookmark"
-
-[fonts]
-family = "MesloLGM Nerd Font"
+[editor]
+program = "zed"
+args = []
 
 [shell]
 program = "pwsh"
-args = []
+args = ["-nologo"]
+
+[fonts.regular]
+family = "Fira Code Mono"
+style = "Normal"
+width = "Normal"
+weight = 400

@@ -1,6 +1,6 @@
-if ($IsIDE -ne $True) {
-    fastfetch
-}
+# if ($IsIDE -ne $True) {
+#     fastfetch
+# }
 
 
 
