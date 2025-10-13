@@ -1,5 +1,18 @@
 ## Global config (Used on all systems) ##
 
+
+function GoTo-Lab {
+
+    param (
+        [string]$labPath
+    )
+    $base = "~/Projects"
+
+    Set-Location "$base/$labPath"
+
+}
+Set-Alias -Name lab -Value GoTo-Lab
+
 $OMPConfig = "$PSScriptRoot/../omp/config.json"
 
 if ($Global:IsIDE -eq $True) {
