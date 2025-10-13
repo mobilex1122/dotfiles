@@ -19,5 +19,10 @@
       // "j k": ["workspace::SendKeystrokes", "escape"]
       "ctrl-shift-c": null
     }
+  },
+  {
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
   }
 ]
