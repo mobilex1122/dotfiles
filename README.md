@@ -8,6 +8,7 @@ My Software Configs
 - [PowerShell](https://microsoft.com/PowerShell)
 - [Rio Terminal](https://rioterm.com)
 - [SourceGit](https://sourcegit-scm.github.io)
+- [Macchina](https://github.com/Macchina-CLI/macchina)
 
 ## Setup
 
