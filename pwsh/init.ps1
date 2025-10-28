@@ -35,8 +35,13 @@ if ($IsLinux) {
     . "$PSScriptRoot/linux.ps1"
     if (!$IsIDE) {
         clear
+        macchina
     }
 } elseif ($IsWindows) {
     . "$PSScriptRoot\global.ps1"
     . "$PSScriptRoot\windows.ps1"
+    if (!$IsIDE) {
+        clear
+        macchina
+    }
 }
