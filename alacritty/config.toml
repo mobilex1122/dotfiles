@@ -1,0 +1,12 @@
+
+[general]
+import = [
+"./themes/github.toml"
+]
+
+[window]
+
+dimensions={columns = 100, lines = 30 }
+
+[font]
+normal = { family = "FiraCode Nerd Font Mono", style = "Regular"}
