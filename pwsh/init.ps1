@@ -1,4 +1,5 @@
 ## Includes all configs that are needed.
+. "$PSScriptRoot/utils.ps1"
 
 
 $Global:IsIDE = $env:ISIDE -eq "1"
@@ -19,12 +20,12 @@ function Start-Log-Print() {
     foreach ($item in $Global:StartLog) {
         Write-Host $item
     }
-
 }
 
 
 Set-Alias -Name slog -Value Start-Log-Log
 Set-Alias -Name start-log -Value Start-Log-Print
+
 
 if ($IsIDE) {
     . "$PSScriptRoot/ide-mode.ps1"
