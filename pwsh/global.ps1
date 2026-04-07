@@ -25,11 +25,6 @@ oh-my-posh init pwsh --config $OMPConfig | Invoke-Expression
 
 Set-Alias -Name lg -Value lazygit
 
-function StartEditor() {
-    Start-Process kate $args
-}
-Set-Alias -Name edit -Value StartEditor
-
 function GitClone() {
 
     git clone $args
